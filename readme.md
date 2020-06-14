@@ -10,6 +10,8 @@ Ideal for your small softwares.
 
 ```cpp
 #include "EthyfierDB/ethyfierdb.h"
+#include <iostream>
+#include <string>
 
 int main()
 {
@@ -29,6 +31,11 @@ int main()
 
     // Remove items
     db->data()->Int16Items()->remove(L"price");
+
+    // Find by name
+    auto item = db->data()->StringItems()->get(L"variable name");
+    if (item)
+        std::wcout << item->getValue();
 
     // Find by value
     db->data()->StringItems()->find([](EthyfierDB::String* item)
