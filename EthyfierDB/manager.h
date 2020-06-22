@@ -61,6 +61,11 @@ namespace EthyfierDB
 				add(item);
 		}
 
+		T* operator	[](const std::wstring& name)
+		{
+			return get(name);
+		}
+
 	private:
 		std::vector<T*> m_items;
 

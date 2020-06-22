@@ -34,6 +34,8 @@ int main()
 
     // Find by name
     auto item = db->data()->StringItems()->get(L"variable name");
+    // Or
+    auto item = (*db->data()->StringItems())[L"variable name"];
     if (item)
         std::wcout << item->getValue();
 
