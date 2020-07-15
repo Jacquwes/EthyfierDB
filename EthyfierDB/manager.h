@@ -9,27 +9,27 @@ namespace EthyfierDB
 	class Manager
 	{
 	public:
-		T* find(std::function<bool(const T*)>& testFunction)
+		T& find(std::function<bool(T&)> testFunction)
 		{
-			for (auto _item : m_items)
+			for (T& _item : m_items)
 				if (testFunction(_item))
 					return _item;
-			return nullptr;
+			throw(Exception(0, L"Item not found.", ExceptionType::ItemNotFound));
 		}
 
-		T* get(const std::wstring& name)
+		T& get(const std::wstring& name)
 		{
 			auto _item = std::find_if(
 				m_items.begin(),
 				m_items.end(),
-				[&name](T* tempItem) { return tempItem->getName() == name; }
+				[&name](T& tempItem) { return tempItem.getName() == name; }
 			);
-			return (_item == m_items.end())
-				? nullptr
-				: *_item;
+			if (_item == m_items.end())
+				throw(Exception(0, L"Item \"" + name + L"\" not found.", ExceptionType::ItemNotFound));
+			else return *_item;
 		}
 
-		std::vector<T*> items()
+		std::vector<T>& items()
 		{
 			return m_items;
 		}
@@ -40,9 +40,9 @@ namespace EthyfierDB
 			auto _item = std::find_if(
 				m_items.begin(),
 				m_items.end(),
-				[&index, &name](T* tempItem)
+				[&index, &name](T& tempItem)
 				{
-					if (tempItem->getName() == name)
+					if (tempItem.getName() == name)
 						return true;
 					index++;
 					return false;
@@ -52,24 +52,28 @@ namespace EthyfierDB
 				m_items.erase(m_items.begin() + index);
 		}
 
-		void set(T* item)
+		void set(T item)
 		{
-			T* _item = get(item->getName());
-			if (_item)
-				*_item = *item;
-			else
+			try
+			{
+				T& _item = get(item.getName());
+				_item = item;
+			}
+			catch (Exception&)
+			{
 				add(item);
+			}
 		}
 
-		T* operator	[](const std::wstring& name)
+		T& operator	[](const std::wstring& name)
 		{
 			return get(name);
 		}
 
 	private:
-		std::vector<T*> m_items;
+		std::vector<T> m_items;
 
-		void add(T* item)
+		void add(T item)
 		{
 			m_items.push_back(item);
 		}

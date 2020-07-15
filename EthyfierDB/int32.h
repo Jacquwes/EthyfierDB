@@ -1,5 +1,4 @@
-#ifndef INT32_H
-#define INT32_H
+#pragma once
 
 #include "item.h"
 #include "pch.h"
@@ -21,5 +20,3 @@ namespace EthyfierDB {
 		int32_t m_value;
 	};
 }
-
-#endif // INT32_H

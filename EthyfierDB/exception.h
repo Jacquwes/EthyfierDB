@@ -1,11 +1,11 @@
-#ifndef EXCEPTION_H
-#define EXCEPTION_H
+#pragma once
 
 #include "pch.h"
 
 namespace EthyfierDB {
 	enum class ExceptionType
 	{
+		ItemNotFound,
 		UndefinedType,
 		UnknownType,
 	};
@@ -27,5 +27,3 @@ namespace EthyfierDB {
 		ExceptionType m_exceptionType;
 	};
 }
-
-#endif // EXCEPTION_H

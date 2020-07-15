@@ -1,5 +1,4 @@
-#ifndef STRING_H
-#define STRING_H
+#pragma once
 
 #include "item.h"
 #include "pch.h"
@@ -21,5 +20,3 @@ namespace EthyfierDB {
 		std::wstring m_value;
 	};
 }
-
-#endif // STRING_H

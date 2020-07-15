@@ -1,5 +1,4 @@
-#ifndef ETHYFIERDB_H
-#define ETHYFIERDB_H
+#pragma once
 
 #include "exception.h"
 #include "int16.h"
@@ -15,14 +14,12 @@ namespace EthyfierDB {
 	public:
 		DB(const std::wstring& path);
 
-		Object* data();
+		Object& data();
 
 		void save();
 
 	private:
-		Object* m_data;
+		Object m_data;
 		std::wstring m_path;
 	};
 }
-
-#endif // ETHYFIERDB_H

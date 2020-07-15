@@ -1,5 +1,4 @@
-#ifndef PCH_H
-#define PCH_H
+#pragma once
 
 #include <filesystem>
 #include <fstream>
@@ -7,4 +6,3 @@
 #include <string>
 #include <vector>
 
-#endif // PCH_H

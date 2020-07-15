@@ -1,5 +1,4 @@
-#ifndef ITEM_H
-#define ITEM_H
+#pragma once
 
 #include "pch.h"
 
@@ -34,4 +33,3 @@ namespace EthyfierDB {
 	};
 }
 
-#endif // ITEM_H

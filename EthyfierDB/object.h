@@ -1,5 +1,4 @@
-#ifndef OBJECT_H
-#define OBJECT_H
+#pragma once
 
 #include "pch.h"
 #include "int16.h"
@@ -14,10 +13,10 @@ namespace EthyfierDB {
 	public:
 		Object(const std::wstring& name);
 
-		Manager<Int16>* Int16Items();
-		Manager<Int32>* Int32Items();
-		Manager<Object>* ObjectItems();
-		Manager<String>* StringItems();
+		Manager<Int16>& Int16Items();
+		Manager<Int32>& Int32Items();
+		Manager<Object>& ObjectItems();
+		Manager<String>& StringItems();
 
 		size_t childrenSize();
 
@@ -28,11 +27,9 @@ namespace EthyfierDB {
 		const RawEthyfierItem serialize();
 
 	private:
-		Manager<Int16>* m_itemsInt16;
-		Manager<Int32>* m_itemsInt32;
-		Manager<Object>* m_itemsObject;
-		Manager<String>* m_itemsString;
+		Manager<Int16> m_itemsInt16;
+		Manager<Int32> m_itemsInt32;
+		Manager<Object> m_itemsObject;
+		Manager<String> m_itemsString;
 	};
 }
-
-#endif // OBJECT_H

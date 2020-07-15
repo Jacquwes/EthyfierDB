@@ -10,24 +10,24 @@
 namespace EthyfierDB {
 	Object::Object(const std::wstring& name)
 		: Item(name),
-		m_itemsInt16(new Manager<Int16>),
-		m_itemsInt32(new Manager<Int32>),
-		m_itemsObject(new Manager<Object>),
-		m_itemsString(new Manager<String>)
+		m_itemsInt16(Manager<Int16>()),
+		m_itemsInt32(Manager<Int32>()),
+		m_itemsObject(Manager<Object>()),
+		m_itemsString(Manager<String>())
 	{}
 
-	Manager<Int16>* Object::Int16Items() { return m_itemsInt16; }
-	Manager<Int32>* Object::Int32Items() { return m_itemsInt32; }
-	Manager<Object>* Object::ObjectItems() { return m_itemsObject; }
-	Manager<String>* Object::StringItems() { return m_itemsString; }
+	Manager<Int16>& Object::Int16Items() { return m_itemsInt16; }
+	Manager<Int32>& Object::Int32Items() { return m_itemsInt32; }
+	Manager<Object>& Object::ObjectItems() { return m_itemsObject; }
+	Manager<String>& Object::StringItems() { return m_itemsString; }
 
 	size_t Object::childrenSize()
 	{
 		return
-			m_itemsInt16->items().size()
-			+ m_itemsInt32->items().size()
-			+ m_itemsObject->items().size()
-			+ m_itemsString->items().size();
+			m_itemsInt16.items().size()
+			+ m_itemsInt32.items().size()
+			+ m_itemsObject.items().size()
+			+ m_itemsString.items().size();
 	}
 
 	void Object::deserialize(const RawEthyfierItem& rawObject)
@@ -74,25 +74,25 @@ namespace EthyfierDB {
 			switch (item.type) {
 			case ItemType::String:
 			{
-				m_itemsString->set(new String(item.name,
+				m_itemsString.set(String(item.name,
 					std::wstring(rawObject.body.begin() + item.address, rawObject.body.begin() + nextItemAddress)));
 				break;
 			}
 			case ItemType::Int16:
 			{
-				m_itemsInt16->set(new Int16(item.name,
+				m_itemsInt16.set(Int16(item.name,
 					rawObject.body[item.address]));
 				break;
 			}
 			case ItemType::Int32:
 			{
-				m_itemsInt32->set(new Int32(item.name,
+				m_itemsInt32.set(Int32(item.name,
 					(rawObject.body[item.address] << 16) | rawObject.body[static_cast<size_t>(item.address + 1)]));
 				break;
 			}
 			case ItemType::Object:
 			{
-				Object* object = new Object(item.name);
+				Object object(item.name);
 
 				// Find header size
 
@@ -113,9 +113,9 @@ namespace EthyfierDB {
 					rawObject.body.begin() + nextItemAddress
 				);
 
-				object->deserialize({ header, body });
+				object.deserialize({ header, body });
 
-				m_itemsObject->set(object);
+				m_itemsObject.set(object);
 				break;
 			}
 			default:
@@ -141,39 +141,39 @@ namespace EthyfierDB {
 
 		header.push_back(static_cast<wchar_t>(childrenSize()));
 
-		std::function<void(Item*)> writeHeader = [&header, &body](Item* item)
+		std::function<void(Item&)> writeHeader = [&header, &body](Item& item)
 		{
 			// Type + name size
-			header.insert(header.end(), { static_cast<wchar_t>(item->getType()), static_cast<wchar_t>(item->getName().size()) });
+			header.insert(header.end(), { static_cast<wchar_t>(item.getType()), static_cast<wchar_t>(item.getName().size()) });
 			// Name
-			for (wchar_t character : item->getName())
+			for (wchar_t character : item.getName())
 				header.push_back(character);
 			// Address
 			header.insert(header.end(), { static_cast<wchar_t>(body.size() >> 16), static_cast<wchar_t>(body.size() & 0xffff) });
 		};
 
-		for (Int16* item : m_itemsInt16->items())
+		for (Int16& item : m_itemsInt16.items())
 		{
 			writeHeader(item);
-			body.push_back(item->getValue());
+			body.push_back(item.getValue());
 		}
-		for (Int32* item : m_itemsInt32->items())
+		for (Int32& item : m_itemsInt32.items())
 		{
 			writeHeader(item);
-			int32_t value = item->getValue();
+			int32_t value = item.getValue();
 			body.insert(body.end(), { static_cast<wchar_t>(value >> 16), static_cast<wchar_t>(value & 0xffff) });
 		}
-		for (Object* item : m_itemsObject->items())
+		for (Object item : m_itemsObject.items())
 		{
 			writeHeader(item);
-			RawEthyfierItem object = item->serialize();
+			RawEthyfierItem object = item.serialize();
 			body.insert(body.end(), object.header.begin(), object.header.end());
 			body.insert(body.end(), object.body.begin(), object.body.end());
 		}
-		for (String* item : m_itemsString->items())
+		for (String item : m_itemsString.items())
 		{
 			writeHeader(item);
-			std::wstring value = item->getValue();
+			std::wstring value = item.getValue();
 			body.insert(body.end(), value.begin(), value.end());
 		}
 

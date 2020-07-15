@@ -1,5 +1,4 @@
-#ifndef UTILS_H
-#define UTILS_H
+#pragma once
 
 #include "pch.h"
 
@@ -22,5 +21,3 @@ namespace EthyfierDB::Utils
 		file.write((char*)&wideChars[0], wideChars.size() * sizeof(wideChars[0]));
 	}
 }
-
-#endif // UTILS_H
