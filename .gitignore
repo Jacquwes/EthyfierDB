@@ -341,3 +341,6 @@ healthchecksdb
 
 # Tests
 Tests/
+
+# Doxygen
+html/

@@ -8,9 +8,17 @@
 #include "string.h"
 
 namespace EthyfierDB {
+	/// <summary>
+	/// Used to contain other items.
+	/// </summary>
 	class Object : public Item
 	{
 	public:
+		/// <summary>
+		/// Create an EthyfierDB Object.
+		/// </summary>
+		/// <param name="name">Name of the object.</param>
+		/// <returns></returns>
 		Object(const std::wstring& name);
 
 		Manager<Int16>& Int16Items();
