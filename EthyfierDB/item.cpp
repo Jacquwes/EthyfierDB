@@ -14,9 +14,9 @@ namespace EthyfierDB {
 
 	ItemType Item::getType()
 	{
-		throw(Exception(0,
+		throw Exception(0,
 			L"This item doesn't have a type.",
-			ExceptionType::UndefinedType));
+			ExceptionType::UndefinedType);
 	}
 
 	void Item::setName(const std::wstring& newName)

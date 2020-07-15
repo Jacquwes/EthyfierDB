@@ -69,7 +69,7 @@ namespace EthyfierDB {
 			const ItemData& item = items[itemIndex];
 			size_t nextItemAddress = (itemIndex == itemsCount - 1)
 				? rawObject.body.size()
-				: items[static_cast<size_t>(itemIndex + 1)].address;
+				: items[(static_cast<size_t>(itemIndex) + 1)].address;
 
 			switch (item.type) {
 			case ItemType::String:
@@ -87,7 +87,7 @@ namespace EthyfierDB {
 			case ItemType::Int32:
 			{
 				m_itemsInt32.set(Int32(item.name,
-					(rawObject.body[item.address] << 16) | rawObject.body[static_cast<size_t>(item.address + 1)]));
+					(rawObject.body[item.address] << 16) | rawObject.body[static_cast<size_t>(item.address) + 1]));
 				break;
 			}
 			case ItemType::Object:
@@ -120,9 +120,9 @@ namespace EthyfierDB {
 			}
 			default:
 			{
-				throw(Exception(item.typeAddress,
+				throw Exception(item.typeAddress,
 					std::to_wstring(static_cast<int>(item.type)) + std::wstring(L" is not an EthyfierDB type."),
-					ExceptionType::UnknownType));
+					ExceptionType::UnknownType);
 				break;
 			}
 			}
@@ -178,5 +178,40 @@ namespace EthyfierDB {
 		}
 
 		return { header, body };
+	}
+
+
+	Item& EthyfierDB::Object::operator[](const std::wstring& name)
+	{
+		// ILL MAKE A CLEANER FUNCTION LATER SRY
+		try
+		{
+			 return m_itemsInt16.get(name);
+		}
+		catch (Exception&)
+		{
+			try
+			{
+				return m_itemsInt32.get(name);
+			}
+			catch (Exception&)
+			{
+				try
+				{
+					return m_itemsObject.get(name);
+				}
+				catch (Exception&)
+				{
+					try
+					{
+						return m_itemsString.get(name);
+					}
+					catch (Exception& e)
+					{
+						throw e;
+					}
+				}
+			}
+		}
 	}
 }

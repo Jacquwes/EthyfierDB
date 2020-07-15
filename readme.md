@@ -15,38 +15,47 @@ Ideal for your small softwares.
 
 int main()
 {
-    // Open a database
-    auto db = new EthyfierDB::DB(L"C:/yourApp/data");
+    auto db = EthyfierDB::DB(L"C:/yourApp/data");
     // Add data
-    db->data()->StringItems()->set(new EthyfierDB::String(L"variable name", L"value"));
-    db->data()->Int16Items()->set(new EthyfierDB::Int16(L"price", 0xff5));
+    db.data().StringItems().set(EthyfierDB::String(L"variable name", L"value"));
+    db.data().Int16Items().set(EthyfierDB::Int16(L"price", 0xff5));
 
     // Create a new object
-    auto object = new EthyfierDB::Object(L"settings");
-    object->Int32Items()->set(new EthyfierDB::Int32("amount", 0x123456789));
-    db->data()->ObjectItems()->set(object);
+    auto object = EthyfierDB::Object(L"settings");
+    object.Int32Items().set(EthyfierDB::Int32(L"amount", 0x123456789));
+    db.data().ObjectItems().set(object);
 
     // "set" can also be used to replace a value
-    db->data()->StringItems()->set(new EthyfierDB::String(L"variable name", L"new value"));
+    db.data().StringItems().set(EthyfierDB::String(L"variable name", L"new value"));
 
     // Remove items
-    db->data()->Int16Items()->remove(L"price");
+    db.data().Int16Items().remove(L"price");
 
-    // Find by name
-    auto item = db->data()->StringItems()->get(L"variable name");
-    // Or
-    auto item = (*db->data()->StringItems())[L"variable name"];
-    if (item)
-        std::wcout << item->getValue();
+    try
+    {
+        // Find by name
+        auto item = db.data().StringItems().get(L"variable name");
+        // Or
+        item = db.data().StringItems()[L"variable name"];
+        // Also 
+        item = db.data()[L"variable name"].as<EthyfierDB::String>();
+    
+        std::wcout << item.getValue();
+    }
+    catch (EthyfierDB::Exception& e)
+    {
+        // If variable not found
+        if (e.exceptionType() == EthyfierDB::ExceptionType::ItemNotFound)
+            std::wcout << e.description();
+    }
 
     // Find by value
-    db->data()->StringItems()->find([](EthyfierDB::String* item)
-    {
-        return item->getValue() == L"new value";
-    });
+    db.data().StringItems().find([](EthyfierDB::String& item)
+        {
+            return item.getValue() == L"new value";
+        });
 
-    // Save your modifications
-    db->save();
-    delete db;
+    // Don't forget to save your modifications !
+    db.save();
 }
 ```

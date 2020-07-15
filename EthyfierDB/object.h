@@ -26,6 +26,8 @@ namespace EthyfierDB {
 
 		const RawEthyfierItem serialize();
 
+		Item& operator[](const std::wstring& name);
+
 	private:
 		Manager<Int16> m_itemsInt16;
 		Manager<Int32> m_itemsInt32;

@@ -22,6 +22,9 @@ namespace EthyfierDB {
 	public:
 		Item(const std::wstring& name);
 
+		template<class T>
+		T& as();
+
 		const std::wstring& getName();
 
 		virtual ItemType getType();
@@ -31,5 +34,12 @@ namespace EthyfierDB {
 	protected:
 		std::wstring m_name;
 	};
+
+	// Don't know why, but generates LNK2019 when declared in item.cpp
+	template<class T>
+	inline T& Item::as()
+	{
+		return (T&)*this;
+	}
 }
 

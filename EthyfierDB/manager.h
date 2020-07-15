@@ -14,7 +14,7 @@ namespace EthyfierDB
 			for (T& _item : m_items)
 				if (testFunction(_item))
 					return _item;
-			throw(Exception(0, L"Item not found.", ExceptionType::ItemNotFound));
+			throw Exception(0, L"Item not found.", ExceptionType::ItemNotFound);
 		}
 
 		T& get(const std::wstring& name)
@@ -25,7 +25,7 @@ namespace EthyfierDB
 				[&name](T& tempItem) { return tempItem.getName() == name; }
 			);
 			if (_item == m_items.end())
-				throw(Exception(0, L"Item \"" + name + L"\" not found.", ExceptionType::ItemNotFound));
+				throw Exception(0, L"Item \"" + name + L"\" not found.", ExceptionType::ItemNotFound);
 			else return *_item;
 		}
 
@@ -34,7 +34,7 @@ namespace EthyfierDB
 			return m_items;
 		}
 
-		void remove(std::wstring& name)
+		void remove(const std::wstring& name)
 		{
 			size_t index{};
 			auto _item = std::find_if(
@@ -65,7 +65,7 @@ namespace EthyfierDB
 			}
 		}
 
-		T& operator	[](const std::wstring& name)
+		T& operator[](const std::wstring& name)
 		{
 			return get(name);
 		}
