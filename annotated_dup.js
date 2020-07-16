@@ -1,14 +1,14 @@
 var annotated_dup =
 [
     [ "EthyfierDB", null, [
-      [ "DB", "class_ethyfier_d_b_1_1_d_b.html", "class_ethyfier_d_b_1_1_d_b" ],
-      [ "Exception", "class_ethyfier_d_b_1_1_exception.html", "class_ethyfier_d_b_1_1_exception" ],
-      [ "Int16", "class_ethyfier_d_b_1_1_int16.html", "class_ethyfier_d_b_1_1_int16" ],
-      [ "Int32", "class_ethyfier_d_b_1_1_int32.html", "class_ethyfier_d_b_1_1_int32" ],
-      [ "Item", "class_ethyfier_d_b_1_1_item.html", "class_ethyfier_d_b_1_1_item" ],
-      [ "Manager", "class_ethyfier_d_b_1_1_manager.html", "class_ethyfier_d_b_1_1_manager" ],
-      [ "Object", "class_ethyfier_d_b_1_1_object.html", "class_ethyfier_d_b_1_1_object" ],
-      [ "RawEthyfierItem", "struct_ethyfier_d_b_1_1_raw_ethyfier_item.html", "struct_ethyfier_d_b_1_1_raw_ethyfier_item" ],
-      [ "String", "class_ethyfier_d_b_1_1_string.html", "class_ethyfier_d_b_1_1_string" ]
+      [ "DB", "a00064.html", "a00064" ],
+      [ "Exception", "a00068.html", "a00068" ],
+      [ "Int16", "a00072.html", "a00072" ],
+      [ "Int32", "a00076.html", "a00076" ],
+      [ "Item", "a00084.html", "a00084" ],
+      [ "Manager", "a00088.html", "a00088" ],
+      [ "Object", "a00092.html", "a00092" ],
+      [ "RawEthyfierItem", "a00080.html", "a00080" ],
+      [ "String", "a00096.html", "a00096" ]
     ] ]
 ];

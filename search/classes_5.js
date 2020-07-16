@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rawethyfieritem_36',['RawEthyfierItem',['../struct_ethyfier_d_b_1_1_raw_ethyfier_item.html',1,'EthyfierDB']]]
+  ['rawethyfieritem_39',['RawEthyfierItem',['../a00080.html',1,'EthyfierDB']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['find_41',['find',['../class_ethyfier_d_b_1_1_manager.html#ac6a0e56690f0e863681d4df0bc53d83b',1,'EthyfierDB::Manager']]]
+  ['exception_46',['Exception',['../a00068.html#a228efe20df434f82e9a2522014c070da',1,'EthyfierDB::Exception']]],
+  ['exceptiontype_47',['exceptionType',['../a00068.html#a988dddbecdb79a0112ed2d5aba5f9a64',1,'EthyfierDB::Exception']]]
 ];

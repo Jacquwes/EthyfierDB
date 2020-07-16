@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['object_47',['Object',['../class_ethyfier_d_b_1_1_object.html#a6bcbd14d25fd467bfb5352d0e709814c',1,'EthyfierDB::Object']]],
-  ['operator_5b_5d_48',['operator[]',['../class_ethyfier_d_b_1_1_manager.html#a079b6de098763a95638b568d0fbf685c',1,'EthyfierDB::Manager']]]
+  ['item_52',['Item',['../a00084.html#ae14d201a2eb8bbdda906b925c03b7fe5',1,'EthyfierDB::Item']]],
+  ['items_53',['items',['../a00088.html#a7d3bf6a83ee47dbca430904c48291bbb',1,'EthyfierDB::Manager']]]
 ];
