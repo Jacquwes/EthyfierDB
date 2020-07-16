@@ -92,27 +92,30 @@ $(document).ready(function(){initNavTree('a00053_source.html',''); initResizable
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;pch.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>EthyfierDB {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="a00096.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00096.html">String</a> : <span class="keyword">public</span> <a class="code" href="a00084.html">Item</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="a00096.html">String</a>(<span class="keyword">const</span> std::wstring&amp; name,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keyword">const</span> std::wstring&amp; value);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        ItemType <a class="code" href="a00096.html#ab99f0d5c7525ca71a1d328af65720fda">getType</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">const</span> std::wstring getValue();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">void</span> setValue(<span class="keyword">const</span> std::wstring&amp; newValue);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::wstring m_value;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="a00096.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00096.html">String</a> : <span class="keyword">public</span> <a class="code" href="a00084.html">Item</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="a00096.html#a343b85e05f3f4e3f98b7081015e2c29e">String</a>(<span class="keyword">const</span> std::wstring&amp; name,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">const</span> std::wstring&amp; value);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        ItemType <a class="code" href="a00096.html#ab99f0d5c7525ca71a1d328af65720fda">getType</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">const</span> std::wstring <a class="code" href="a00096.html#a9059a0e79bf4e8f1ac441285d6da5ad5">getValue</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="a00096.html#a739cedabaceb010e29d7ec5840186eb9">setValue</a>(<span class="keyword">const</span> std::wstring&amp; newValue);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::wstring m_value;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00096_html"><div class="ttname"><a href="a00096.html">EthyfierDB::String</a></div><div class="ttdef"><b>Definition:</b> string.h:8</div></div>
+<div class="ttc" id="aa00096_html_a9059a0e79bf4e8f1ac441285d6da5ad5"><div class="ttname"><a href="a00096.html#a9059a0e79bf4e8f1ac441285d6da5ad5">EthyfierDB::String::getValue</a></div><div class="ttdeci">const std::wstring getValue()</div><div class="ttdoc">Get the value of the String.</div><div class="ttdef"><b>Definition:</b> string.cpp:17</div></div>
+<div class="ttc" id="aa00096_html_a343b85e05f3f4e3f98b7081015e2c29e"><div class="ttname"><a href="a00096.html#a343b85e05f3f4e3f98b7081015e2c29e">EthyfierDB::String::String</a></div><div class="ttdeci">String(const std::wstring &amp;name, const std::wstring &amp;value)</div><div class="ttdoc">Create a new String.</div><div class="ttdef"><b>Definition:</b> string.cpp:6</div></div>
+<div class="ttc" id="aa00096_html"><div class="ttname"><a href="a00096.html">EthyfierDB::String</a></div><div class="ttdoc">Represents an EthyfierDB's String item.</div><div class="ttdef"><b>Definition:</b> string.h:11</div></div>
+<div class="ttc" id="aa00096_html_a739cedabaceb010e29d7ec5840186eb9"><div class="ttname"><a href="a00096.html#a739cedabaceb010e29d7ec5840186eb9">EthyfierDB::String::setValue</a></div><div class="ttdeci">void setValue(const std::wstring &amp;newValue)</div><div class="ttdoc">Change the value of the String.</div><div class="ttdef"><b>Definition:</b> string.cpp:22</div></div>
 <div class="ttc" id="aa00084_html"><div class="ttname"><a href="a00084.html">EthyfierDB::Item</a></div><div class="ttdoc">Base EthyfierDB item. Cannot be saved, only used to be inherited by &quot;real&quot; items.</div><div class="ttdef"><b>Definition:</b> item.h:24</div></div>
-<div class="ttc" id="aa00096_html_ab99f0d5c7525ca71a1d328af65720fda"><div class="ttname"><a href="a00096.html#ab99f0d5c7525ca71a1d328af65720fda">EthyfierDB::String::getType</a></div><div class="ttdeci">ItemType getType() override</div><div class="ttdoc">Returns the type of the item.</div><div class="ttdef"><b>Definition:</b> string.cpp:12</div></div>
+<div class="ttc" id="aa00096_html_ab99f0d5c7525ca71a1d328af65720fda"><div class="ttname"><a href="a00096.html#ab99f0d5c7525ca71a1d328af65720fda">EthyfierDB::String::getType</a></div><div class="ttdeci">ItemType getType() override</div><div class="ttdoc">Returns the type of the Item.</div><div class="ttdef"><b>Definition:</b> string.cpp:12</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
