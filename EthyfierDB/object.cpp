@@ -23,8 +23,7 @@ namespace EthyfierDB {
 
 	size_t Object::childrenSize()
 	{
-		return
-			m_itemsInt16.items().size()
+		return m_itemsInt16.items().size()
 			+ m_itemsInt32.items().size()
 			+ m_itemsObject.items().size()
 			+ m_itemsString.items().size();
@@ -34,6 +33,11 @@ namespace EthyfierDB {
 	{
 		if (rawObject.header.empty() || rawObject.body.empty())
 			return;
+
+		m_itemsInt16.items().clear();
+		m_itemsInt32.items().clear();
+		m_itemsObject.items().clear();
+		m_itemsString.items().clear();
 
 		struct ItemData
 		{
