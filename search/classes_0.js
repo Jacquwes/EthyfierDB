@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['db_30',['DB',['../a00064.html',1,'EthyfierDB']]]
+  ['db_31',['DB',['../a00067.html',1,'EthyfierDB']]]
 ];

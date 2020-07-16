@@ -1,14 +1,14 @@
 var annotated_dup =
 [
     [ "EthyfierDB", null, [
-      [ "DB", "a00064.html", "a00064" ],
-      [ "Exception", "a00068.html", "a00068" ],
-      [ "Int16", "a00072.html", "a00072" ],
-      [ "Int32", "a00076.html", "a00076" ],
-      [ "Item", "a00084.html", "a00084" ],
-      [ "Manager", "a00088.html", "a00088" ],
-      [ "Object", "a00092.html", "a00092" ],
-      [ "RawEthyfierItem", "a00080.html", "a00080" ],
-      [ "String", "a00096.html", "a00096" ]
+      [ "DB", "a00067.html", "a00067" ],
+      [ "Exception", "a00071.html", "a00071" ],
+      [ "Int16", "a00075.html", "a00075" ],
+      [ "Int32", "a00079.html", "a00079" ],
+      [ "Item", "a00087.html", "a00087" ],
+      [ "Manager", "a00091.html", "a00091" ],
+      [ "Object", "a00095.html", "a00095" ],
+      [ "RawEthyfierItem", "a00083.html", "a00083" ],
+      [ "String", "a00099.html", "a00099" ]
     ] ]
 ];

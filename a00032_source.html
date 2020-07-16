@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('a00032_source.html',''); initResizable
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;pch.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>EthyfierDB {</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="a00080.html">    6</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="a00080.html">RawEthyfierItem</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="a00083.html">    6</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="a00083.html">RawEthyfierItem</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        std::vector&lt;wchar_t&gt; header;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        std::vector&lt;wchar_t&gt; body;</div>
@@ -99,28 +99,28 @@ $(document).ready(function(){initNavTree('a00032_source.html',''); initResizable
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">enum class</span> ItemType</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="a00072.html">Int16</a>,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="a00076.html">Int32</a>,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="a00092.html">Object</a>,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="a00096.html">String</a>,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="a00075.html">Int16</a>,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="a00079.html">Int32</a>,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="a00095.html">Object</a>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="a00099.html">String</a>,</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    };</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="a00084.html">   23</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00084.html">Item</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="a00087.html">   23</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00087.html">Item</a></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="a00084.html#ae14d201a2eb8bbdda906b925c03b7fe5">Item</a>(<span class="keyword">const</span> std::wstring&amp; name);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="a00087.html#ae14d201a2eb8bbdda906b925c03b7fe5">Item</a>(<span class="keyword">const</span> std::wstring&amp; name);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="a00084.html#a4a38a187122a0e57a4d6035311a3c350">   37</a></span>&#160;        <span class="keyword">inline</span> T&amp; <a class="code" href="a00084.html#a4a38a187122a0e57a4d6035311a3c350">as</a>()</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="a00087.html#a4a38a187122a0e57a4d6035311a3c350">   37</a></span>&#160;        <span class="keyword">inline</span> T&amp; <a class="code" href="a00087.html#a4a38a187122a0e57a4d6035311a3c350">as</a>()</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">return</span> (T&amp;)*<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">const</span> std::wstring&amp; <a class="code" href="a00084.html#a02f6b95b437616e7876adfcbacff2bc7">getName</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">const</span> std::wstring&amp; <a class="code" href="a00087.html#a02f6b95b437616e7876adfcbacff2bc7">getName</a>();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">virtual</span> ItemType <a class="code" href="a00084.html#a30658465b189c0052028a8b67fb8511d">getType</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">virtual</span> ItemType <a class="code" href="a00087.html#a30658465b189c0052028a8b67fb8511d">getType</a>();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="a00084.html#a1f92ef4b7476b9b44d45c18971241b6b">setName</a>(<span class="keyword">const</span> std::wstring&amp; newName);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="a00087.html#a1f92ef4b7476b9b44d45c18971241b6b">setName</a>(<span class="keyword">const</span> std::wstring&amp; newName);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        std::wstring m_name;</div>
@@ -129,17 +129,17 @@ $(document).ready(function(){initNavTree('a00032_source.html',''); initResizable
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00084_html_a1f92ef4b7476b9b44d45c18971241b6b"><div class="ttname"><a href="a00084.html#a1f92ef4b7476b9b44d45c18971241b6b">EthyfierDB::Item::setName</a></div><div class="ttdeci">void setName(const std::wstring &amp;newName)</div><div class="ttdoc">Set the name of the item.</div><div class="ttdef"><b>Definition:</b> item.cpp:22</div></div>
-<div class="ttc" id="aa00072_html"><div class="ttname"><a href="a00072.html">EthyfierDB::Int16</a></div><div class="ttdef"><b>Definition:</b> int16.h:8</div></div>
-<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">EthyfierDB::RawEthyfierItem</a></div><div class="ttdef"><b>Definition:</b> item.h:7</div></div>
-<div class="ttc" id="aa00084_html_a02f6b95b437616e7876adfcbacff2bc7"><div class="ttname"><a href="a00084.html#a02f6b95b437616e7876adfcbacff2bc7">EthyfierDB::Item::getName</a></div><div class="ttdeci">const std::wstring &amp; getName()</div><div class="ttdoc">Returns the name of the item.</div><div class="ttdef"><b>Definition:</b> item.cpp:10</div></div>
-<div class="ttc" id="aa00096_html"><div class="ttname"><a href="a00096.html">EthyfierDB::String</a></div><div class="ttdoc">Represents an EthyfierDB's String item.</div><div class="ttdef"><b>Definition:</b> string.h:11</div></div>
-<div class="ttc" id="aa00076_html"><div class="ttname"><a href="a00076.html">EthyfierDB::Int32</a></div><div class="ttdef"><b>Definition:</b> int32.h:8</div></div>
-<div class="ttc" id="aa00084_html"><div class="ttname"><a href="a00084.html">EthyfierDB::Item</a></div><div class="ttdoc">Base EthyfierDB item. Cannot be saved, only used to be inherited by &quot;real&quot; items.</div><div class="ttdef"><b>Definition:</b> item.h:24</div></div>
-<div class="ttc" id="aa00084_html_ae14d201a2eb8bbdda906b925c03b7fe5"><div class="ttname"><a href="a00084.html#ae14d201a2eb8bbdda906b925c03b7fe5">EthyfierDB::Item::Item</a></div><div class="ttdeci">Item(const std::wstring &amp;name)</div><div class="ttdoc">Create an EthyfierDB item.</div><div class="ttdef"><b>Definition:</b> item.cpp:6</div></div>
-<div class="ttc" id="aa00084_html_a30658465b189c0052028a8b67fb8511d"><div class="ttname"><a href="a00084.html#a30658465b189c0052028a8b67fb8511d">EthyfierDB::Item::getType</a></div><div class="ttdeci">virtual ItemType getType()</div><div class="ttdoc">Returns the type of the item.</div><div class="ttdef"><b>Definition:</b> item.cpp:15</div></div>
-<div class="ttc" id="aa00092_html"><div class="ttname"><a href="a00092.html">EthyfierDB::Object</a></div><div class="ttdoc">Used to contain other items.</div><div class="ttdef"><b>Definition:</b> object.h:15</div></div>
-<div class="ttc" id="aa00084_html_a4a38a187122a0e57a4d6035311a3c350"><div class="ttname"><a href="a00084.html#a4a38a187122a0e57a4d6035311a3c350">EthyfierDB::Item::as</a></div><div class="ttdeci">T &amp; as()</div><div class="ttdoc">Easily &quot;cast&quot; any item to another type.</div><div class="ttdef"><b>Definition:</b> item.h:37</div></div>
+<div class="ttc" id="aa00099_html"><div class="ttname"><a href="a00099.html">EthyfierDB::String</a></div><div class="ttdoc">Represents an EthyfierDB's String item.</div><div class="ttdef"><b>Definition:</b> string.h:11</div></div>
+<div class="ttc" id="aa00087_html_a02f6b95b437616e7876adfcbacff2bc7"><div class="ttname"><a href="a00087.html#a02f6b95b437616e7876adfcbacff2bc7">EthyfierDB::Item::getName</a></div><div class="ttdeci">const std::wstring &amp; getName()</div><div class="ttdoc">Returns the name of the item.</div><div class="ttdef"><b>Definition:</b> item.cpp:10</div></div>
+<div class="ttc" id="aa00079_html"><div class="ttname"><a href="a00079.html">EthyfierDB::Int32</a></div><div class="ttdef"><b>Definition:</b> int32.h:8</div></div>
+<div class="ttc" id="aa00095_html"><div class="ttname"><a href="a00095.html">EthyfierDB::Object</a></div><div class="ttdoc">Used to contain other items.</div><div class="ttdef"><b>Definition:</b> object.h:15</div></div>
+<div class="ttc" id="aa00087_html_ae14d201a2eb8bbdda906b925c03b7fe5"><div class="ttname"><a href="a00087.html#ae14d201a2eb8bbdda906b925c03b7fe5">EthyfierDB::Item::Item</a></div><div class="ttdeci">Item(const std::wstring &amp;name)</div><div class="ttdoc">Create an EthyfierDB item.</div><div class="ttdef"><b>Definition:</b> item.cpp:6</div></div>
+<div class="ttc" id="aa00087_html_a4a38a187122a0e57a4d6035311a3c350"><div class="ttname"><a href="a00087.html#a4a38a187122a0e57a4d6035311a3c350">EthyfierDB::Item::as</a></div><div class="ttdeci">T &amp; as()</div><div class="ttdoc">Easily &quot;cast&quot; any item to another type.</div><div class="ttdef"><b>Definition:</b> item.h:37</div></div>
+<div class="ttc" id="aa00087_html"><div class="ttname"><a href="a00087.html">EthyfierDB::Item</a></div><div class="ttdoc">Base EthyfierDB item. Cannot be saved, only used to be inherited by &quot;real&quot; items.</div><div class="ttdef"><b>Definition:</b> item.h:24</div></div>
+<div class="ttc" id="aa00075_html"><div class="ttname"><a href="a00075.html">EthyfierDB::Int16</a></div><div class="ttdef"><b>Definition:</b> int16.h:8</div></div>
+<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">EthyfierDB::RawEthyfierItem</a></div><div class="ttdef"><b>Definition:</b> item.h:7</div></div>
+<div class="ttc" id="aa00087_html_a1f92ef4b7476b9b44d45c18971241b6b"><div class="ttname"><a href="a00087.html#a1f92ef4b7476b9b44d45c18971241b6b">EthyfierDB::Item::setName</a></div><div class="ttdeci">void setName(const std::wstring &amp;newName)</div><div class="ttdoc">Set the name of the item.</div><div class="ttdef"><b>Definition:</b> item.cpp:22</div></div>
+<div class="ttc" id="aa00087_html_a30658465b189c0052028a8b67fb8511d"><div class="ttname"><a href="a00087.html#a30658465b189c0052028a8b67fb8511d">EthyfierDB::Item::getType</a></div><div class="ttdeci">virtual ItemType getType()</div><div class="ttdoc">Returns the type of the item.</div><div class="ttdef"><b>Definition:</b> item.cpp:15</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
