@@ -24,7 +24,7 @@ namespace EthyfierDB {
 		/// <summary>
 		/// Main Object. Lets you interact with the database.
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>Database's main object.</returns>
 		Object& data();
 
 		/// <summary>
