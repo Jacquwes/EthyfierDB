@@ -1,6 +1,4 @@
-﻿<!--
-//! \mainpage Presentation
--->
+﻿//! \mainpage Presentation
 
 # EthyfierDB
 
