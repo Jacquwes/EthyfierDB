@@ -1,4 +1,6 @@
-﻿# EthyfierDB
+﻿//! \mainpage Presentation
+
+# EthyfierDB
 
 EthyfierDB is a lightweight object based storage library for C++17.
 
