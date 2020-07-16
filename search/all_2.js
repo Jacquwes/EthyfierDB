@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['exception_5',['Exception',['../a00071.html',1,'EthyfierDB::Exception'],['../a00071.html#af48c5b9044344b5d1dad980c27bc5644',1,'EthyfierDB::Exception::Exception()']]],
-  ['exceptiontype_6',['exceptionType',['../a00071.html#a988dddbecdb79a0112ed2d5aba5f9a64',1,'EthyfierDB::Exception']]]
+  ['data_3',['data',['../a00067.html#a2e5cd0bce4689104fcb7aeac2518eb7e',1,'EthyfierDB::DB']]],
+  ['db_4',['DB',['../a00067.html',1,'EthyfierDB::DB'],['../a00067.html#aca2df43b7229bf7e633cbfe6886113fe',1,'EthyfierDB::DB::DB()']]],
+  ['description_5',['description',['../a00071.html#a2fef60dba1669192ad008d327945611c',1,'EthyfierDB::Exception']]],
+  ['deserialize_6',['deserialize',['../a00095.html#aef041ae89d6e474cd7412f3ee49dcf00',1,'EthyfierDB::Object']]]
 ];
