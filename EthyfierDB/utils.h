@@ -4,6 +4,11 @@
 
 namespace EthyfierDB::Utils
 {
+	/// <summary>
+	/// Return the content of a file as a `std::vector<wchar_t>`.
+	/// </summary>
+	/// <param name="fileName">Path to the file.</param>
+	/// <returns>Content of the file.</returns>
 	inline std::vector<wchar_t> readWideChars(const std::wstring& fileName)
 	{
 		std::vector<wchar_t> values;
@@ -15,6 +20,11 @@ namespace EthyfierDB::Utils
 		return values;
 	}
 
+	/// <summary>
+	/// Writes data to a file.
+	/// </summary>
+	/// <param name="fileName">Path to the file.</param>
+	/// <param name="wideChars">Data to write.</param>
 	inline void writeWideChars(const std::wstring& fileName, const std::vector<wchar_t>& wideChars)
 	{
 		std::fstream file(fileName, std::ios::out | std::ios::binary);
