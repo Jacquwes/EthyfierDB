@@ -25,10 +25,8 @@
 var NAVTREE =
 [
   [ "EthyfierDB", "index.html", [
-    [ "Presentation", "index.html", [
-      [ "EthyfierDB", "index.html#autotoc_md0", [
-        [ "How to use it", "index.html#autotoc_md1", null ]
-      ] ]
+    [ "EthyfierDB", "a00116.html", [
+      [ "How to use it", "a00116.html#autotoc_md1", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['rawethyfieritem_29',['RawEthyfierItem',['../a00083.html',1,'EthyfierDB']]],
-  ['remove_30',['remove',['../a00091.html#afa9ee97a0a510e1ac94561edd72c2ae0',1,'EthyfierDB::Manager']]]
+  ['save_31',['save',['../a00067.html#af6beb730eec1d9a71dd11e7727e41c35',1,'EthyfierDB::DB']]],
+  ['serialize_32',['serialize',['../a00095.html#aeddebee64da764b5833aa7a16f7568b1',1,'EthyfierDB::Object']]],
+  ['set_33',['set',['../a00091.html#a967b761d1b866680feaa28e5f69b0576',1,'EthyfierDB::Manager']]],
+  ['setname_34',['setName',['../a00087.html#a1f92ef4b7476b9b44d45c18971241b6b',1,'EthyfierDB::Item']]],
+  ['setvalue_35',['setValue',['../a00079.html#aa6b8445690882f8ca0139e3ac3230c49',1,'EthyfierDB::Int32::setValue()'],['../a00099.html#a739cedabaceb010e29d7ec5840186eb9',1,'EthyfierDB::String::setValue()']]],
+  ['string_36',['String',['../a00099.html',1,'EthyfierDB::String'],['../a00099.html#a343b85e05f3f4e3f98b7081015e2c29e',1,'EthyfierDB::String::String()']]],
+  ['stringitems_37',['StringItems',['../a00095.html#a00dcbed51ce9fc052a353a620d0b076d',1,'EthyfierDB::Object']]]
 ];
