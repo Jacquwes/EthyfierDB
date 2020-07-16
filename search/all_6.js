@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['object_14',['Object',['../class_ethyfier_d_b_1_1_object.html',1,'EthyfierDB::Object'],['../class_ethyfier_d_b_1_1_object.html#a6bcbd14d25fd467bfb5352d0e709814c',1,'EthyfierDB::Object::Object()']]]
+  ['manager_12',['Manager',['../class_ethyfier_d_b_1_1_manager.html',1,'EthyfierDB']]],
+  ['manager_3c_20ethyfierdb_3a_3aint16_20_3e_13',['Manager&lt; EthyfierDB::Int16 &gt;',['../class_ethyfier_d_b_1_1_manager.html',1,'EthyfierDB']]],
+  ['manager_3c_20ethyfierdb_3a_3aint32_20_3e_14',['Manager&lt; EthyfierDB::Int32 &gt;',['../class_ethyfier_d_b_1_1_manager.html',1,'EthyfierDB']]],
+  ['manager_3c_20ethyfierdb_3a_3aobject_20_3e_15',['Manager&lt; EthyfierDB::Object &gt;',['../class_ethyfier_d_b_1_1_manager.html',1,'EthyfierDB']]],
+  ['manager_3c_20ethyfierdb_3a_3astring_20_3e_16',['Manager&lt; EthyfierDB::String &gt;',['../class_ethyfier_d_b_1_1_manager.html',1,'EthyfierDB']]]
 ];
