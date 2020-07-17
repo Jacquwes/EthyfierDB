@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EthyfierDB: Main Page</title>
+<title>EthyfierDB: Presentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -81,13 +81,143 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">EthyfierDB Documentation</div>  </div>
+<div class="title">Presentation </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><span id="top"></span></p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+EthyfierDB</h1>
+<p>EthyfierDB is a lightweight object based storage library for C++17.</p>
+<p>Ideal for your small softwares.</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md2"></a>
+Summary</h2>
+<ul>
+<li><a href="#ethyfierdb">EthyfierDB</a><ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#1-download-ethyfierdb">1. Download EthyfierDB</a><ul>
+<li><a href="#1-1-build-yourself">1. 1. Build yourself</a></li>
+<li><a href="#1-2-download-pre-built">1. 2. Download pre-built</a></li>
+<li><a href="#1-3-include">1. 3. Include</a></li>
+</ul>
+</li>
+<li><a href="#2-how-to-use-ethyfierdb">2. How to use EthyfierDB</a><ul>
+<li><a href="#2-1-open-a-database">2. 1. Open a database</a></li>
+<li><a href="#2-2-add-data-to-the-database">2. 2. Add data to the database</a></li>
+<li><a href="#2-3-replace-data-in-the-database">2. 3. Replace data in the database</a></li>
+<li><a href="#2-4-remove-items-from-the-database">2. 4. Remove Items from the database</a></li>
+<li><a href="#2-5-get-items-from-the-database">2. 5. Get Items from the database</a><ul>
+<li><a href="#2-5-1-find-by-name">2. 5. 1. Find by name</a></li>
+<li><a href="#2-5-2-find-by-value">2. 5. 2. Find by value</a></li>
+</ul>
+</li>
+<li><a href="#2-6-save-the-database">2. 6. Save the database</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr  />
+<h2><a class="anchor" id="autotoc_md4"></a>
+1. Download EthyfierDB</h2>
+<p><em>Currently only available for Windows</em></p>
+<h3><a class="anchor" id="autotoc_md5"></a>
+1. 1. Build yourself</h3>
+<p>use <code>git clone <a href="https://github.com/JacqueSatan/EthyfierDB">https://github.com/JacqueSatan/EthyfierDB</a></code>, and open <code>EthyfierDB/EthyfierDB.sln</code> with Visual Studio.</p>
+<h3><a class="anchor" id="autotoc_md6"></a>
+1. 2. Download pre-built</h3>
+<p>Available at : <a href="https://github.com/JacqueSatan/EthyfierDB/releases">https://github.com/JacqueSatan/EthyfierDB/releases</a></p>
+<h3><a class="anchor" id="autotoc_md7"></a>
+1. 3. Include</h3>
+<p>Add the <code>EthyfierDB</code> directory to the additionnal include directories of your project. To use EthyfierDB, <code>#include "EthyfierDB/ethyfierdb.h"</code></p>
+<p>⚠️ - Only supports <code>std::wstring</code> and <code>wchar_t</code>. You can't use <code>std::string</code> or <code>char</code> with EthyfierDB.</p>
+<p><a href="#top">Top</a></p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md9"></a>
+2. How to use EthyfierDB</h2>
+<h3><a class="anchor" id="autotoc_md10"></a>
+2. 1. Open a database</h3>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;EthyfierDB/ethyfierdb.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Opens a database at &quot;C:/YourApp/data&quot;.</span></div>
+<div class="line">    <span class="comment">// &quot;C:/YourApp&quot; must exist.</span></div>
+<div class="line">    <a class="code" href="a00067.html">EthyfierDB::DB</a> Database = <a class="code" href="a00067.html">EthyfierDB::DB</a>(L<span class="stringliteral">&quot;C:/YourApp/data&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a href="#top">Top</a></p>
+<h3><a class="anchor" id="autotoc_md11"></a>
+2. 2. Add data to the database</h3>
+<div class="fragment"><div class="line"><span class="comment">// &quot;db.data()&quot; returns an &quot;EthyfierDB::Object&quot;.</span></div>
+<div class="line"><span class="comment">// Simple data types</span></div>
+<div class="line">db.data().Int16Items().set(<a class="code" href="a00075.html">EthyfierDB::Int16</a>(L<span class="stringliteral">&quot;Int16 item&quot;</span>, 0x1234));</div>
+<div class="line">db.data().Int32Items().set(<a class="code" href="a00079.html">EthyfierDB::Int32</a>(L<span class="stringliteral">&quot;int32 Item&quot;</span>, 0x12345678));</div>
+<div class="line">db.data().StringItems().set(<a class="code" href="a00099.html">EthyfierDB::String</a>(L<span class="stringliteral">&quot;string&quot;</span>, L<span class="stringliteral">&quot;item value&quot;</span>));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Complex data types</span></div>
+<div class="line"><a class="code" href="a00095.html">EthyfierDB::Object</a> <span class="keywordtype">object</span> = <a class="code" href="a00095.html">EthyfierDB::Object</a>(L<span class="stringliteral">&quot;object&quot;</span>);</div>
+<div class="line"><span class="keywordtype">object</span>.Int16Items().set(<a class="code" href="a00075.html">EthyfierDB::Int16</a>(L<span class="stringliteral">&quot;another int16&quot;</span>, 0x1234));</div>
+<div class="line">db.data().ObjectItems().set(<span class="keywordtype">object</span>);</div>
+</div><!-- fragment --><p><a href="#top">Top</a></p>
+<h3><a class="anchor" id="autotoc_md12"></a>
+2. 3. Replace data in the database</h3>
+<div class="fragment"><div class="line"><span class="comment">// When an item has the same name, it replaces the old one.</span></div>
+<div class="line">db.data().Int16Items().set(<a class="code" href="a00075.html">EthyfierDB::Int16</a>(L<span class="stringliteral">&quot;Int16 item&quot;</span>, 0x1234));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Items can be modified with a function too.</span></div>
+<div class="line">db.data().Int16Items().get(L<span class="stringliteral">&quot;Int16 item&quot;</span>).setValue(0xffff);</div>
+</div><!-- fragment --><p><a href="#top">Top</a></p>
+<h3><a class="anchor" id="autotoc_md13"></a>
+2. 4. Remove Items from the database</h3>
+<div class="fragment"><div class="line"><span class="comment">// Items can be deleted by their name.</span></div>
+<div class="line">db.data().Int16Items().remove(L<span class="stringliteral">&quot;Int16 item&quot;</span>);</div>
+</div><!-- fragment --><p><a href="#top">Top</a></p>
+<h3><a class="anchor" id="autotoc_md14"></a>
+2. 5. Get Items from the database</h3>
+<h4><a class="anchor" id="autotoc_md15"></a>
+2. 5. 1. Find by name</h4>
+<div class="fragment"><div class="line"><span class="keywordflow">try</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Find a String by name :</span></div>
+<div class="line">    std::wstring value = db.data().StringItems().get(L<span class="stringliteral">&quot;string&quot;</span>).getValue();</div>
+<div class="line">    value = db.data().StringItems()[L<span class="stringliteral">&quot;string&quot;</span>].getValue();</div>
+<div class="line">    value = db.data()[L<span class="stringliteral">&quot;string&quot;</span>].as&lt;<a class="code" href="a00099.html">EthyfierDB::String</a>&gt;().getValue();</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// Thrown if the item doesn&#39;t exist.</span></div>
+<div class="line"><span class="keywordflow">catch</span> (<a class="code" href="a00071.html">EthyfierDB::Exception</a>&amp; ex)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (ex.<a class="code" href="a00071.html#a988dddbecdb79a0112ed2d5aba5f9a64">exceptionType</a>() == EthyfierDB::ExceptionType::ItemNotFound)</div>
+<div class="line">        std::wcout &lt;&lt; ex.<a class="code" href="a00071.html#a2fef60dba1669192ad008d327945611c">description</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a href="#top">Top</a></p>
+<h4><a class="anchor" id="autotoc_md16"></a>
+2. 5. 2. Find by value</h4>
+<div class="fragment"><div class="line"><span class="comment">// Returns the item for which the lambda returns true.</span></div>
+<div class="line">db.data().StringItems().find([](<a class="code" href="a00099.html">EthyfierDB::String</a>&amp; item)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> item.<a class="code" href="a00099.html#a9059a0e79bf4e8f1ac441285d6da5ad5">getValue</a>() == L<span class="stringliteral">&quot;item value&quot;</span>;</div>
+<div class="line">    });</div>
+</div><!-- fragment --><p><a href="#top">Top</a></p>
+<h3><a class="anchor" id="autotoc_md17"></a>
+2. 6. Save the database</h3>
+<div class="fragment"><div class="line">db.save();</div>
+</div><!-- fragment --><p><a href="#top">Top</a> </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa00071_html_a2fef60dba1669192ad008d327945611c"><div class="ttname"><a href="a00071.html#a2fef60dba1669192ad008d327945611c">EthyfierDB::Exception::description</a></div><div class="ttdeci">std::wstring description()</div><div class="ttdoc">Textual description of the error.</div><div class="ttdef"><b>Definition:</b> exception.cpp:18</div></div>
+<div class="ttc" id="aa00099_html"><div class="ttname"><a href="a00099.html">EthyfierDB::String</a></div><div class="ttdoc">Represents an EthyfierDB's String item.</div><div class="ttdef"><b>Definition:</b> string.h:11</div></div>
+<div class="ttc" id="aa00079_html"><div class="ttname"><a href="a00079.html">EthyfierDB::Int32</a></div><div class="ttdoc">Used to contains 32 bits wide numbers.</div><div class="ttdef"><b>Definition:</b> int32.h:11</div></div>
+<div class="ttc" id="aa00095_html"><div class="ttname"><a href="a00095.html">EthyfierDB::Object</a></div><div class="ttdoc">Used to contain other items.</div><div class="ttdef"><b>Definition:</b> object.h:15</div></div>
+<div class="ttc" id="aa00075_html"><div class="ttname"><a href="a00075.html">EthyfierDB::Int16</a></div><div class="ttdoc">Used to contains 16 bits wide numbers.</div><div class="ttdef"><b>Definition:</b> int16.h:11</div></div>
+<div class="ttc" id="aa00099_html_a9059a0e79bf4e8f1ac441285d6da5ad5"><div class="ttname"><a href="a00099.html#a9059a0e79bf4e8f1ac441285d6da5ad5">EthyfierDB::String::getValue</a></div><div class="ttdeci">const std::wstring getValue()</div><div class="ttdoc">Get the value of the String.</div><div class="ttdef"><b>Definition:</b> string.cpp:17</div></div>
+<div class="ttc" id="aa00067_html"><div class="ttname"><a href="a00067.html">EthyfierDB::DB</a></div><div class="ttdoc">Main library class. Used to interact with any EthyfierDB database.</div><div class="ttdef"><b>Definition:</b> ethyfierdb.h:16</div></div>
+<div class="ttc" id="aa00071_html_a988dddbecdb79a0112ed2d5aba5f9a64"><div class="ttname"><a href="a00071.html#a988dddbecdb79a0112ed2d5aba5f9a64">EthyfierDB::Exception::exceptionType</a></div><div class="ttdeci">ExceptionType exceptionType()</div><div class="ttdoc">Type of the exception.</div><div class="ttdef"><b>Definition:</b> exception.cpp:23</div></div>
+<div class="ttc" id="aa00071_html"><div class="ttname"><a href="a00071.html">EthyfierDB::Exception</a></div><div class="ttdoc">Thrown by EthyfierDB instead of std::exception.</div><div class="ttdef"><b>Definition:</b> exception.h:20</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

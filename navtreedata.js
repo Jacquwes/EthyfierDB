@@ -25,8 +25,26 @@
 var NAVTREE =
 [
   [ "EthyfierDB", "index.html", [
-    [ "EthyfierDB", "a00116.html", [
-      [ "How to use it", "a00116.html#autotoc_md1", null ]
+    [ "Presentation", "index.html", [
+      [ "EthyfierDB", "index.html#autotoc_md0", [
+        [ "Summary", "index.html#autotoc_md2", null ],
+        [ "1. Download EthyfierDB", "index.html#autotoc_md4", [
+          [ "1. 1. Build yourself", "index.html#autotoc_md5", null ],
+          [ "1. 2. Download pre-built", "index.html#autotoc_md6", null ],
+          [ "1. 3. Include", "index.html#autotoc_md7", null ]
+        ] ],
+        [ "2. How to use EthyfierDB", "index.html#autotoc_md9", [
+          [ "2. 1. Open a database", "index.html#autotoc_md10", null ],
+          [ "2. 2. Add data to the database", "index.html#autotoc_md11", null ],
+          [ "2. 3. Replace data in the database", "index.html#autotoc_md12", null ],
+          [ "2. 4. Remove Items from the database", "index.html#autotoc_md13", null ],
+          [ "2. 5. Get Items from the database", "index.html#autotoc_md14", [
+            [ "2. 5. 1. Find by name", "index.html#autotoc_md15", null ],
+            [ "2. 5. 2. Find by value", "index.html#autotoc_md16", null ]
+          ] ],
+          [ "2. 6. Save the database", "index.html#autotoc_md17", null ]
+        ] ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
