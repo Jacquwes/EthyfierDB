@@ -1,0 +1,2 @@
+/usr/bin/ar qc libEthyfierDB.a  CMakeFiles/EthyfierDB.dir/EthyfierDB/ethyfierdb.cpp.o CMakeFiles/EthyfierDB.dir/EthyfierDB/exception.cpp.o CMakeFiles/EthyfierDB.dir/EthyfierDB/int16.cpp.o CMakeFiles/EthyfierDB.dir/EthyfierDB/int32.cpp.o CMakeFiles/EthyfierDB.dir/EthyfierDB/item.cpp.o CMakeFiles/EthyfierDB.dir/EthyfierDB/object.cpp.o CMakeFiles/EthyfierDB.dir/EthyfierDB/pch.cpp.o CMakeFiles/EthyfierDB.dir/EthyfierDB/string.cpp.o
+/usr/bin/ranlib libEthyfierDB.a

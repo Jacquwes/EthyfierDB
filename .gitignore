@@ -346,3 +346,6 @@ Tests/
 Doxyfile
 html/
 mainpage.md
+
+# CMake
+cmake-build*
